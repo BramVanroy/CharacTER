@@ -23,3 +23,10 @@ optional arguments:
 Please apply 'PYTHONIOENCODING' in environment variables, if 
 UnicodeEncodeError occurs.
 
+# Modifications Bram Vanroy
+
+Bram Vanroy packaged this library to be compatible with PyPi. Therefore, some packaging modifications have been done
+but implementation-wise nothing has changed. The PDF-file of the paper was removed in favor of adding a CITATION file. 
+
+The original license applies, i.e., GPL v3.
+

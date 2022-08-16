@@ -1,0 +1,15 @@
+@inproceedings{wang-etal-2016-character,
+    title = "{C}harac{T}er: Translation Edit Rate on Character Level",
+    author = "Wang, Weiyue  and
+      Peter, Jan-Thorsten  and
+      Rosendahl, Hendrik  and
+      Ney, Hermann",
+    booktitle = "Proceedings of the First Conference on Machine Translation: Volume 2, Shared Task Papers",
+    month = aug,
+    year = "2016",
+    address = "Berlin, Germany",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/W16-2342",
+    doi = "10.18653/v1/W16-2342",
+    pages = "505--510",
+}
