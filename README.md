@@ -14,7 +14,7 @@ distance, which effectively counters the issue that shorter translations normall
 
 ## Modifications by Bram Vanroy
 
-Bram Vanroy made some changes to this package that do not affect the result of calculate the metric but that should
+Bram Vanroy made some changes to this package that do not affect the result of the metric but that should
 improve usability. Code has been re-written to avoid the need for custom C++ code (instead the [C implementation
 of Levenshtein](https://github.com/maxbachmann/Levenshtein) alongside an LRU cache is used), to make functions more
 accessible and readable, and typing info has been included. Packaging has also improved to make uploading to PyPi a
