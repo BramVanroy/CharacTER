@@ -620,4 +620,5 @@ copy of the Program in return for a fee.
 
 
 CharacTER Copyright (C) 2022 rwth-i6; https://github.com/rwth-i6 (original implementation)
-CharacTER Copyright (C) 2022 Bram Vanroy; https://github.com/BramVanroy (packaging and redistribution)
+CharacTER Copyright (C) 2022 Bram Vanroy; https://github.com/BramVanroy (pip-installable, removed C++ dependency,
+ packaging, pip-distribution)
