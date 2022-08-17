@@ -1,10 +1,13 @@
 from pathlib import Path
 from setuptools import find_packages, setup
 
+
+extras = {"dev": ["isort>=5.5.4", "black", "flake8", "pytest", "pytest_cases", "pygments"]}
+
 setup(
-    name="CharacTER",
-    version="0.0.1",
-    description="Translation Edit Rate on character level",
+    name="cer",
+    version="1.0.0",
+    description="Translation Edit Rate on the character level",
     long_description=Path("README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
     keywords="machine-translation machine-translation-evaluation evaluation mt",
@@ -32,5 +35,9 @@ setup(
         "Source": "https://github.com/BramVanroy/CharacTER"
     },
     python_requires=">=3.7",
-    install_requires=["Levenshtein"]
+    install_requires=["Levenshtein"],
+    extras_require=extras,
+    entry_points={
+        "console_scripts": ["calculate-cer=cer.commands.calculate_cer:main"]
+    }
 )
