@@ -2,10 +2,10 @@
 
 CharacTER: Translation Edit Rate on Character Level
 
-CharacTer is a novel character level metric inspired by the commonly applied translation edit rate (TER). It is defined
+CharacTer (cer) is a novel character level metric inspired by the commonly applied translation edit rate (TER). It is defined
 as the minimum number of character edits required to adjust a hypothesis, until it completely matches the reference,
 normalized by the length of the hypothesis sentence. CharacTer calculates the character level edit distance while
-performing the shift edit on word level. Unlike the strict matching criterion in Ter, a hypothesis word is considered
+performing the shift edit on word level. Unlike the strict matching criterion in TER, a hypothesis word is considered
 to match a reference word and could be shifted, if the edit distance between them is below a threshold value. The
 Levenshtein distance between the reference and the shifted hypothesis sequence is computed on the character level. In
 addition, the lengths of hypothesis sequences instead of reference sequences are used for normalizing the edit
@@ -14,7 +14,7 @@ distance, which effectively counters the issue that shorter translations normall
 
 ## Modifications by Bram Vanroy
 
-Bram Vanroy made some changes to this package that does not effect the result of calculate the metric but that should
+Bram Vanroy made some changes to this package that do not affect the result of calculate the metric but that should
 improve usability. Code has been re-written to avoid the need for custom C++ code (instead the [C implementation
 of Levenshtein](https://github.com/maxbachmann/Levenshtein) alongside an LRU cache is used), to make functions more
 accessible and readable, and typing info has been included. Packaging has also improved to make uploading to PyPi a
