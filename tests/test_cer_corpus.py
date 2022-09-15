@@ -9,9 +9,13 @@ def test_corpus(example_saudis, example_estimate):
     results = calculate_cer_corpus(hyps, refs)
     real_results = [example_saudis["cer"], example_estimate["cer"]]
 
+    assert abs(real_results[0] - example_saudis["cer"]) < 0.00000001
+    assert abs(real_results[1] - example_estimate["cer"]) < 0.00000001
+
     assert results["count"] == len(hyps)
     assert abs(results["mean"] - mean(real_results)) < 0.00000001
     assert abs(results["median"] - median(real_results)) < 0.00000001
     assert abs(results["std"] - stdev(real_results)) < 0.00000001
     assert abs(results["min"] - min(real_results)) < 0.00000001
     assert abs(results["max"] - max(real_results)) < 0.00000001
+    assert set(results.keys()) == {"count", "mean", "median", "std", "min", "max", "cer_scores"}

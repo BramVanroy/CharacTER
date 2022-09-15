@@ -6,7 +6,7 @@ def test_example_saudis(example_saudis):
     ref = example_saudis["ref"].split()
     result = calculate_cer(hyp, ref)
 
-    assert abs(result -  example_saudis["cer"]) < 0.00000001
+    assert abs(result - example_saudis["cer"]) < 0.00000001
 
 
 def test_example_estimate(example_estimate):

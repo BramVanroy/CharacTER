@@ -41,6 +41,7 @@ def calculate_cer_corpus(hyps: Sequence[AddableStrSequence], refs: Sequence[Adda
         "std": stdev(cers),
         "min": min(cers),
         "max": max(cers),
+        "cer_scores": cers,
     }
 
 
