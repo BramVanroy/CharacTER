@@ -30,15 +30,19 @@ def calculate_cer_corpus(hyps: Sequence[AddableStrSequence], refs: Sequence[Adda
 
     :param hyps: corpus of hypotheses; sequences of sequences of words (str)
     :param refs: corpus of references; sequences of sequences of words (str)
-    :return: a dictionary of mean, median, std, min and max CER scores, and the number of sentences (count)
+    :return: a dictionary of mean, median, std, min and max CER scores, and the number of sentences (count). Std will
+    be None if only one hypothesis and reference were given
     """
+    if len(hyps) != len(refs):
+        raise ValueError("Number of references and hypotheses need to be equal")
+
     cers = [calculate_cer(hyp, ref) for hyp, ref in zip(hyps, refs)]
 
     return {
         "count": len(cers),
         "mean": mean(cers),
         "median": median(cers),
-        "std": stdev(cers),
+        "std": stdev(cers) if len(hyps) != 1 else None,  # Calculating stdev on one item would trigger error
         "min": min(cers),
         "max": max(cers),
         "cer_scores": cers,
