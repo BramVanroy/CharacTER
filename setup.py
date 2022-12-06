@@ -6,7 +6,7 @@ extras = {"dev": ["isort>=5.5.4", "black", "flake8", "pytest"]}
 
 setup(
     name="cer",
-    version="1.1.0",
+    version="1.2.0",
     description="Translation Edit Rate on the character level",
     long_description=Path("README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
